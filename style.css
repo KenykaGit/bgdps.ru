@@ -1,0 +1,85 @@
+@font-face {
+    font-family: KronaOne;
+    src: url(KronaOne.ttf);
+}
+
+* {
+    font-family: KronaOne;
+}
+
+body {
+    background-image: url('/img/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.content-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+h1 {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInDown 0.8s ease-out forwards;
+}
+
+.flex.gap-6.text-white a {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.flex.gap-6.text-white a:nth-child(1) {
+    animation: fadeInUp 0.5s ease-out 0.3s forwards;
+}
+
+.flex.gap-6.text-white a:nth-child(2) {
+    animation: fadeInUp 0.5s ease-out 0.4s forwards;
+}
+
+.flex.gap-6.text-white a:nth-child(3) {
+    animation: fadeInUp 0.5s ease-out 0.5s forwards;
+}
+
+/* Keyframes для анимаций */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.delay-100 {
+    transition-delay: 100ms;
+}
+
+.delay-200 {
+    transition-delay: 200ms;
+}
