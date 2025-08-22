@@ -12,8 +12,7 @@ tailwind.config = {
           },
           logo: {
             green: "#83FF92",
-            blue: "#72A3FF",
-            red: "#FA5170"
+            blue: "#72A3FF"
           }
         }
       }
